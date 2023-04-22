@@ -1,0 +1,11 @@
+name: Test
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/setup-python@v4
+      - run: python -c "import os; path = os.path.expanduser('~/Desktop'); print(os.path.exists(path))"
+          
