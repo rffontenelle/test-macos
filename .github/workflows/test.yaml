@@ -9,4 +9,4 @@ jobs:
       - uses: actions/setup-python@v4
       - run: python -c "import os; path = os.path.expanduser('~/Desktop'); print(os.path.exists(path))"
       - run: python -c "import os; print(os.path.exists('~/Desktop'))"
-      - run: python -c "import os; newpath = os.path.expanduser('~/Desktop/newdir'); print(os.path.exists(newpath))"
+      - run: python -c "import os; newpath = os.path.expanduser('~/Desktop/newdir'); os.makedirs(newpath); print(os.path.exists(newpath))"
